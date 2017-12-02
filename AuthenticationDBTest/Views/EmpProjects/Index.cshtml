@@ -1,0 +1,46 @@
+﻿@model IEnumerable<AuthenticationDBTest.Data.EmpProject>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Employee.Ename)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Project.PName)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Date)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Employee.Ename)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Project.PName)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.EPId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.EPId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.EPId })|
+            @Html.ActionLink("UploadFiles", "UploadFile","Upload", new { id=item.EPId },new { })
+        </td>
+    </tr>
+}
+
+</table>

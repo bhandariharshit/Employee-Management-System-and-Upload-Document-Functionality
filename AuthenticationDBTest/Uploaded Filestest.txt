@@ -1,0 +1,26 @@
+yes
+
+iquerable vs ienurable
+Dataannotation
+public private protected
+extension methods 
+-
+-
+abstrsact class interface
+indexes
+sql vs sql azure
+static readonly const
+sealed class
+polymophism runtime compile time
+static class
+design pattern 
+core2
+webapi 
+GC
+Stack heap
+GAC
+Oops Concept
+GC
+Using
+Abstract Class Private constructor
+webApi

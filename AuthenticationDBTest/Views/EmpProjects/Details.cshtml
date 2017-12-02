@@ -1,0 +1,42 @@
+﻿@model AuthenticationDBTest.Data.EmpProject
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>EmpProject</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Date)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Employee.Ename)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Employee.Ename)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Project.PName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Project.PName)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.EPId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

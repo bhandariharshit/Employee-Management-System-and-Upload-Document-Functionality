@@ -1,0 +1,20 @@
+EDBCClosure (eeedate is getting set)
+EDBCNMagiPostProcessor (eeedate=null)
+EDBCClosurePostProcessor
+
+Rulesheet no: 1030_130
+
+Created an attribute IsReceivingEXPT in NMagi ecore anf added a filter in the rulesheet to check whether the flag is true or not
+
+use KYHBE;
+
+select TypeOfAssitanceCode,istemporarybenefit,estimatedeligibilityenddate,casenumber,* from [EligibilityDetermination].[Eligibility] e 
+with (nolock)
+where TypeOfAssitanceCode IN( 'PTCC','PTDC','PTEW') and programcode='MA' and isdelete='N' and currenteligibilityindicator='A' 
+and EdgStatusCode='AP' and estimatedeligibilityenddate is not null
+
+select * from ProductionSupport.DatabaseRestoreHistory
+
+select * from DataCollection.IndividualLivingArrangement where individualid=850005548
+select * from DataCollection.EmergencyMedicalConditionExtension 
+select * from DataCollection.IndividualBenefitExtension

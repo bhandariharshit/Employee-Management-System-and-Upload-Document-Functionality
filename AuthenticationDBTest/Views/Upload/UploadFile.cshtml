@@ -1,0 +1,18 @@
+﻿@model AuthenticationDBTest.Models.FileModel
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Upload File</h2>
+
+
+@using (Html.BeginForm("UploadFile", "Upload", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <div>
+        @*<input type="file" name="@Model.file" id="@Model.file" multiple/>*@
+        @Html.TextBoxFor(m => m.file, new { type = "file" })
+        <input type="submit" name="Submit">
+        @Html.HiddenFor(m=>m.empId,new { Value=Model.empId})
+        @ViewBag.Message
+    </div>
+}
